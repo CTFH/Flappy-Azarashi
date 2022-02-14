@@ -25,7 +25,7 @@ public class ScrollObject : MonoBehaviour
         //transform.position = new Vector(8f,0,0)だと隙間ができるwhileTrueでなくUpdate（１秒間に60回）だから微妙な誤差ができる
         //通り過ぎた分を加味してポジションを再設定
         float diff = transform.position.x - endPosition;//-8.0012-(-8)
-        Vector3 restartPosition = transform.position;//transformPositionは３つセットじゃないとダメ
+        Vector3 restartPosition = transform.position;//transformPositionは３つセットじゃないとダメp178
         restartPosition.x = startPosition + diff;//7.99.. (
         //startPositionはインスペクターから登録(8)
         transform.position = restartPosition;//(7.99,0,0)
