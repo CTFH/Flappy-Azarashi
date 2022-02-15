@@ -25,7 +25,7 @@ public class AzarashiController : MonoBehaviour
     //順番的には　New（インスタンスの生成）→Awake→Start→Update
     
     {
-        rb2d = GetComponent<Rigidbody2D>();//自分のコンポーネントのrigidbody2の種地区
+        rb2d = GetComponent<Rigidbody2D>();//自分のコンポーネントのrigidbody2の種地区(主軸？）
         //スプライトに設定されているAnimatorコンポーネントをAwake時に取得しておく
         animator = sprite.GetComponent<Animator>();
     }
