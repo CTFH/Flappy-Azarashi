@@ -92,6 +92,8 @@ public class GameController : MonoBehaviour
         blocks.SetActive(true);
 
         //最初の入力だけゲームコントローラーから渡す
+        //GameStartからアザラシフラップをよんだだけ
+        //開始したときにぴょんとして始めるため
         azarashi.Flap();
 
         //ラベルを更新
