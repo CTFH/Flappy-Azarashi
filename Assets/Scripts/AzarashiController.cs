@@ -56,6 +56,14 @@ public class AzarashiController : MonoBehaviour
             return;
         }
 
+        //重力が効いてないときは操作しない
+        //isKinematicを有効にすると重力の影響を受けない
+        //動けるようにするためにはisKinematicをfalse
+        if (rb2d.isKinematic)
+        {
+            return;
+        }
+
         //Velocityを直接書き換えて上方向に加速
         rb2d.velocity = new Vector2(0.0f, flapVelocity);
     }
@@ -103,5 +111,12 @@ public class AzarashiController : MonoBehaviour
         
         //何かにぶつかったら死亡フラグをたてる
         isDead = true;
+    }
+
+    public void SetSteerActive(bool active)
+    {
+        //Rigidbodyのオン、オフを切り替える
+        //setSteerActiveをTrueにするとiskinematicがfalseになって動く
+        rb2d.isKinematic = !active;
     }
 }
