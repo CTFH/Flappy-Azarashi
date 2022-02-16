@@ -108,6 +108,7 @@ public class GameController : MonoBehaviour
         //Find関数を用いることでシーン中からヒエラルキーにある全てのScrollObjectのコンポーネントを配列として探す。
         //シーン中の全てのScrollObjectコンポーネントを探し出す
         ScrollObject[] scrollObjects = FindObjectsOfType<ScrollObject>();
+        //Unityでは<>にはコンポーネントが入る
 
         //enabledフラグをfalseにすることでスクロールを停止させる
         //全ScrollObjectのスクロール処理を無効にする
