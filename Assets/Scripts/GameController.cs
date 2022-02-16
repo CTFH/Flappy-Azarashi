@@ -76,6 +76,7 @@ public class GameController : MonoBehaviour
         scoreText.text = "Score : " + 0;
 
         stateText.gameObject.SetActive(true);
+        //インスペクターの（一番）上のチェックをつけたり外したりして文字を見えるか見なくするかしている
         stateText.text = "Ready";
     }
 

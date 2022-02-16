@@ -15,5 +15,8 @@ public class ClearTrigger : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         gameController.SendMessage("IncreaseScore");
+        //このゲームオブジェクト全体にこのイベント（increaseScore）が発生したよとコールする
+        //increaseScoreがその後実行される
+        //GetComponent<>().で記述してもOK
     }
 }

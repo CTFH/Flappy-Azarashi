@@ -7,7 +7,8 @@ class FlashEffect : MonoBehaviour
     private float alpha;
 
     public static void Play()
-    {
+    {   
+        //create emptyじゃなくてもスクリプトから作成出来る
         GameObject go = new GameObject("Flash");
         go.AddComponent<FlashEffect>();
     }
